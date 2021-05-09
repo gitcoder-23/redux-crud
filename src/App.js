@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import Contacts from './components/contacts/Contacts';
+import Navbar from './components/elements/Navbar';
+import './styles/App.scss';
+import { Provider  } from 'react-redux'; // 1st 
+import store from './store'; // 2nd add here the store
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import AddContact from './components/contacts/AddContact';
+import EditContact from './components/contacts/EditContact';
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    // store name provide to the Provider 
+    <Provider  store= {store}>
+      <Router>
+      <div className="App">
+      <Navbar />
+      <div className="container">
+        {/* "py-3" padding top-bottom */}
+        <div className="py-3"> 
+        {/* Add loaded page inside of Switch */}
+        <Switch>
+          <Route exact path='/' component={Contacts} />
+          <Route exact path='/contacts/add' component={AddContact} />
+          <Route exact path='/contacts/edit/:id' component={EditContact} />
+        </Switch>
+        </div>
+      </div>
+      </div>
+      </Router>
+    </Provider >
+    );
 }
 
 export default App;

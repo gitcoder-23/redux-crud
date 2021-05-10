@@ -12,7 +12,7 @@ import { CREATE_CONTACT, GET_CONTACT, UPDATE_CONTACT, DELETE_CONTACT, SELECT_CON
 //       type: CREATE_CONTACT,
 //       payload: contact,
 //     }
-//   } use for increment/ decrement then return
+//   } use for increment/ decrement then returns
 
 export const addContact = (contact) => ({
     // object

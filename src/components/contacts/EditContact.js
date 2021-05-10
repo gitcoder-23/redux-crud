@@ -60,7 +60,7 @@ const EditContact = () => {
 
     return (
         <div className="card border-0 shadow">
-      <div className="card-header">Add a Contact</div>
+      <div className="card-header">Edit a Contact</div>
       <div className="card-body">
           {/* to disable ? mark from url during Submit */}
         <form onSubmit ={(e) => onUpdateContact(e)}>

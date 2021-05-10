@@ -8,7 +8,7 @@ import { CREATE_CONTACT, GET_CONTACT, UPDATE_CONTACT, DELETE_CONTACT, SELECT_CON
 // 1st all data initialize here reducer-data
 const initialState = {
     // data add inside of this object
-   contacts: [
+  contacts: [
         {
           "id": 1,
           "name": "Leanne Graham",
@@ -239,15 +239,15 @@ const initialState = {
             "bs": "target end-to-end models"
           }
         }
-      ],
-   counter: 0,
-   time: "Sunday", 
-    // TO GET contact 1st
-    contact: null, 
+    ],
+  counter: 0,
+  time: "Sunday", 
+  // TO GET contact 1st
+  contact: null, 
     
-    // select all contact
-    selectedContacts: [],
-    };
+  // select all contact
+  selectedContacts: [],
+};
 
 
 
@@ -295,7 +295,7 @@ export const contactReducer = (state = initialState, action) => {
           case DELETE_CONTACT:
           return {
             ...state, //total initial state bydefault old data not delete
-            // data return by map() 10 contact 10 loops
+            //  to check matched data array by filter()
             contacts: state.contacts.filter((contact) => 
             contact.id !== action.payload),
           };

@@ -8,6 +8,7 @@ import { useHistory } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 // 2nd
 import { addContact } from '../../actions/contactAction'
+
 const AddContact = () => {
     // to redirect to the next page 2nd
     let history = useHistory();

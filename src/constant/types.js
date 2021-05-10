@@ -1,5 +1,7 @@
 // action types
 export const CREATE_CONTACT = "CREATE_CONTACT";
+
+// To edit data fetch
 export const GET_CONTACT = "GET_CONTACT";
 
 // to update

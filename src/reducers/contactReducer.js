@@ -268,7 +268,7 @@ export const contactReducer = (state = initialState, action) => {
           contacts: [action.payload, ...state.contacts]
         };
 
-
+        // For edit data fatch on input field
        case GET_CONTACT:
         //  to check matched data array by filter()
         // == compare and match
